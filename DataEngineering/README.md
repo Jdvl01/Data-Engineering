@@ -1,1 +1,1 @@
-Jago will do it all
+Jago will do it all (and Pierre will help a bit)
