@@ -5,3 +5,5 @@ Testing change
 Another new line
 Something different
 one more test
+
+I also want to be part of this
