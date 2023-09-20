@@ -1,2 +1,2 @@
-# Data-Engineering
-Github project for the course Data Engineering
+# SENTIDASH
+Github project for all our courses
