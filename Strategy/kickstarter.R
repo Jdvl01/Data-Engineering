@@ -33,10 +33,6 @@ ggplot(info, aes(x = Duration, y = Successful)) +
   geom_hline(yintercept = success_rate, color = "red", linetype = "dashed") +
   theme_minimal()
 
-
-# Logistic regression?
-
-
 # Function to combine data from week 19 to week 32
 library(dplyr)
 combineKickstarterData <- function() {
@@ -80,6 +76,14 @@ ggplot(combined_data, aes(x = Duration, y = Successful)) +
   theme_minimal()
 
 
+# Calculate success rates for different campaign durations
+success_rates <- combined_data %>%
+  group_by(Duration) %>%
+  summarize(Success_Rate = mean(Successful))
 
-
+# Plot success rates over different durations
+ggplot(success_rates, aes(x = Duration, y = Success_Rate)) +
+  geom_line(color = "blue") +
+  labs(x = "Duration (days)", y = "Success Rate", title = "Success Rate vs. Duration") +
+  theme_minimal()
 
